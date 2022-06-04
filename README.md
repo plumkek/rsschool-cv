@@ -1,1 +1,1 @@
-# rsschool-cv
+https://plumkek.github.io/rsschool-cv/cv
