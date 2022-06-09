@@ -5,23 +5,52 @@
   <meta meta name="vieport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>CV</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <style>
+      a{
+        text-decoration: none; 
+        color: rgb(50, 32, 74);
+    } 
+  </style>
 </head>
 <body>
     <header>
-        <h1>Sofya Fomicheva</h1>
-        <img src="photo_for_cv.png" alt="my photo" width="340px">
+    <div class="container">
+        <nav class="navigation">
+            <ul style="list-style-type: none" class="navigation-list">
+                <li class="navigation-item"><a href="#info" class="navigation-list">About me</a></li>
+                <li class="navigation-item"><a href="#contacts" class="navigation-list">Contacts</a></li>
+                <li class="navigation-item"><a href="#education" class="navigation-list">Education</a></li>
+                <li class="navigation-item"><a href="#language" class="navigation-list">Language</a></li>
+                <li class="navigation-item"><a href="#skills" class="navigation-list">Skills</a></li>
+                <li class="navigation-item"><a href="#code" class="navigation-list">Code example</a></li>
+                <li class="navigation-item"><a href="#projects" class="navigation-list">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
-    <main>
-        <section class="contacts">
+    <div class="main-conteiner">
+        <div class="name" id="name">
+            <h1>Sofya Fomicheva<br>Front-end Developer</h1>
+            <img src="assets/photo_for_cv.png" alt="my photo" width="200px" class="round">
+        </div>
+    <main class="main">
+        <div class="blocks">
+        <section class="contacts" id="contacts">
             <h2>
                 Contacts
             </h2>
             <p><span>E-mail:</span><a href="salli_00@mail.ru"> salli_00@mail.ru</a></p>
             <p><span>Git Hub:</span><a href="https://github.com/plumkek"> @plumkek</a></p>
             <p><span>Telergram: @plumkek</span></p>
+            <p><span>Discord:</span> @plumkek</p>
             <p><span>Location: Russia, Novosibirsk</span></p>
         </section>
-        <section class="info">
+        </div>
+        <div class="blocks">
+        <section class="info" id="info">
             <h2>
                 About me
             </h2>
@@ -32,7 +61,9 @@
                 As for me Front-End is really exciting and it shows that even small thigs are really important. And i belive my passion for knowelange and my perseverance will alow me to become a professional in this field of development.
             </p> 
         </section>
-        <section class="hard-skills">
+        </div>
+        <div class="blocks">
+        <section class="skills" id="skills">
             <h2>
                 Hard-skills
             </h2>
@@ -42,7 +73,7 @@
                 <li>VS Code</li>
             </ul>
         </section>
-        <section class="soft-skills">
+        <section class="skills2">
             <h2>
                 Soft-skills
             </h2>
@@ -53,38 +84,20 @@
                 <li>Problem-solving</li>
             </ul>
         </section>
-        <section class="code">
+        </div>
+        <div class="blocks">
+        <section class="code" id="code">
             <h2>
                 Code
             </h2>
-            <p>Codewars example:
-               <pre>
-                   <code>
-                    function multiply(a, b){
-                        a * b
-                      }
-                   </code>
-               </pre>
-            </p>
-            <p>Solution:
-                <pre>
-                    <code>
-                    function multiply(a, b){
-                        return a * b
-                    }
-                    </code>
-                </pre>
-             </p>
+            <p><span class="code-text"><code>function multiply(a, b){<br>
+                return a * b<br>
+              }
+            </code></span></p>
         </section>
-        <section class="project">
-            <h2>
-                Progects
-            </h2>
-            <ul>
-                <li><a href="https://github.com/plumkek/rsschool-cv">rsschool-cv</a></li>
-            </ul>
-        </section>
-        <section class="education">
+        </div>
+        <div class="blocks">
+        <section class="education" id="education">
             <h2>
                 Education
             </h2>
@@ -97,7 +110,9 @@
                 </li>
             </ul>
         </section>
-        <section class="language">
+        </div>
+        <div class="blocks">
+        <section class="language" id="language">
             <h2>
                 Language
             </h2>
@@ -106,8 +121,24 @@
                 <li>English C1-C2 according to <a href="https://www.efset.org/quick-check/">efset.org</a> quick test
                 </li>
             </ul>
-            <img src="english.png" alt="test results" width="200">
+            <img src="assets/english.png" alt="test results" width="200">
         </section>
+        </div>
+        <div class="blocks">
+            <section class="projects" id="projects">
+                <h2>
+                    Projects
+                </h2>
+                <ul>
+                    <li><a href="https://github.com/plumkek/rsschool-cv">rsschool-cv</a></li>
+                </ul>
+            </section>
+            </div>
     </main>
+    <footer class="footer">
+        <li style="list-style-type: none" ><a href="https://github.com/plumkek" target="_blank"><img src="assets/gitHub_logo.png" alt="GitHub logo" width="50"></a></li>
+        <li style="list-style-type: none" >Created in 2022</li>
+        <li style="list-style-type: none" ><a href="https://rs.school/js/" target="_blank"><img src="https://rs.school/images/rs_school_js.svg" alt="RS-School_logo" width="100"></a></li>
+    </footer>
 </body>
 </html>
