@@ -1,3 +1,214 @@
-p {
-    color: rgb(235, 198, 236);
-  }
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(26, 24, 33);
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 50px;
+}
+.header {
+    background-color: rgb(196, 111, 87);
+}
+.navigation-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navigation-link {
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+}
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid cadetblue;
+    background-color: rgb(255, 255, 255);
+}
+.section-education, .section-projects{
+    border-bottom: 0;
+}
+.section-title{
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgb(196, 87, 109)
+}
+.section-name {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 50px 30px 35px;
+    border-bottom: 15px solid rgb(232, 232, 230);
+}
+.section-name-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.section-name-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+.section-education, .section-projects {
+    border-bottom: 0;
+}
+.main {
+    margin-bottom: auto;
+}
+.main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    color: rgb(46, 61, 32);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 50px;
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -70px;
+    background-color: rgb(196, 111, 87);
+}
+.section-subtitle {
+    color: rgb(104, 120, 89);
+}
+.section-list {
+    margin: 0;
+    padding: 10px;
+}
+.section-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.section-item a {
+    text-decoration: none;
+    color: rgb(104, 120, 89);
+    transition: color 0.5s;
+}
+a:hover {
+    color: rgb(234, 223, 15);
+    transition: color 0.5s;
+}
+.footer {
+    background-color: rgb(196, 111, 87);
+    padding: 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
+.github {
+    width: 50px;
+    height: 50px;
+    background-image: url("/assets/github_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rsschool {
+    width: 100px;
+    height: 40px;
+    background-image: url("https://rs.school/images/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pre {
+    padding: 0;
+    margin: 0;
+}
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    user-select: none;
+}
+.nav-menu div {
+    width: 70%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
+}
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+    .section-name {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation {
+        display: none;
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-education {
+        border-bottom: 1px solid cadetblue;
+    }
+}
+@media (max-width: 410px) {
+    .main-title {
+      font-size: 24px;
+      letter-spacing: 4px;
+    }  
+}

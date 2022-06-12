@@ -1,16 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="vieport" content="width=device-width, initial-scale=1.0">
-<title>CV</title>
+  <meta charset="UTF-8">
+  <meta name="vieport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CV</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div>
-<header>header</header>
-<main>main</main>
-<footer>footer</footer>
-</div>
+    <header class="header">
+        <div class="header-container">
+            <nav class="navigation">
+                <ul style="list-style-type: none" class="navigation-list">
+                    <li class="navigation-item"><a href="#info" class="navigation-link">About</a></li>
+                    <li class="navigation-item"><a href="#contacts" class="navigation-link">Contacts</a></li>
+                    <li class="navigation-item"><a href="#education" class="navigation-link">Education</a></li>
+                    <li class="navigation-item"><a href="#language" class="navigation-link">Language</a></li>
+                    <li class="navigation-item"><a href="#skills" class="navigation-link">Skills</a></li>
+                    <li class="navigation-item"><a href="#code" class="navigation-link">Code</a></li>
+                    <li class="navigation-item"><a href="#projects" class="navigation-link">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="nav-menu">
+                <div class="line 1"></div>
+                <div class="line 2"></div>
+                <div class="line 3"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container main-container">
+            <section class="section section-name" id="name">
+            <img src="assets/photo_for_cv.png" alt="my photo" class="section-name-photo">
+            <div class="section-name-title">
+                <h1 class="section-title main-title">Sofya Fomicheva</h1>
+                <h3 class="section-subtitle">Junior Front-End Developer</h3>
+            </div>
+            </section>
+            <section class="section" id="contacts">
+            <h2 class="section-title">
+                Contacts
+            </h2>
+            <ul class="section-list">
+                <li class="section-item contacts-item">E-mail: <a href="mailto:salli_00@mail.ru" title="email"> salli_00@mail.ru</a></li>
+                <li class="section-item contacts-item">Git Hub: <a href="https://github.com/plumkek" title="github"> @plumkek</a></li>
+                <li class="section-item contacts-item">Telergram: <a href="https://t.me/plumkek" title="telegram"> @plumkek</a></li>
+                <li class="section-item contacts-item">Russia, Novosibirsk</li>
+            </ul>
+            </section>     
+            <section class="section" id="info">
+            <h2 class="section-title">
+                About me
+            </h2>
+            <p>
+                Hello! My name is Sonya, i'm 22. Currently i'm getting a BCs degree in Automation and Computer Engineering Department. I've been  always interested in programming so thats why i decided to become a Font-End Developer. As for me Front-End is really exciting and it shows that even small thigs are really important. And i belive my passion for knowelange and my perseverance will alow me to become a professional in this field of development.
+            </p> 
+            </section>
+            <section class="section" id="skills">
+            <h2 class="section-title">
+                Hard-skills
+            </h2>
+            <ul class="section-list">
+                <li class="section-item">HTML5 and CSS3 basics</li>
+                <li class="section-item">GitHub, Git</li>
+                <li class="section-item">VS Code</li>
+            </ul>
+            </section>
+            <section class="section" id="2skills">
+            <h2 class="section-title">
+                Soft-skills
+            </h2>
+            <ul class="section-list">
+                <li class="section-item">Creativity</li>
+                <li class="section-item">Communication skills</li>
+                <li class="section-item">Growth mindset</li>
+                <li class="section-item">Problem-solving</li>
+            </ul>
+            </section>
+            <section class="section" id="code">
+            <h2 class="section-title">
+                Code
+            </h2>
+            <pre class="pre">
+                <code>
+function multiply(a, b){
+    return a * b
+}
+                </code>
+            </pre>
+            </section>
+            <section class="section" id="language">
+                <h2 class="section-title">
+                    Language
+                </h2>
+                <ul class="section-list">
+                    <li class="section-item">Russian (native)</li>
+                    <li class="section-item">English C1-C2 according to <a href="https://www.efset.org/quick-check/">efset.org</a> quick test
+                    </li>
+                </ul>
+                <img src="assets/english.png" alt="test results" width="200">
+            </section>
+            <section class="section section-education" id="education">
+            <h2 class="section-title">
+                Education
+            </h2>
+            <ul class="section-list">
+                <li class="section-item">
+                    Informatics and Computer Engineering BSc at NSTU (in progress)
+                </li>
+                <li class="section-item">
+                    JavaScript/Front-end. Stage 0 at <a href="https://app.rs.school">RS School</a>(in progress)
+                </li>
+            </ul>
+            </section>
+            <section class="section section-projects" id="projects">
+                <h2 class="section-title">
+                    Projects
+                </h2>
+                <ul class="section-list">
+                <li class="section-item"><a href="https://github.com/plumkek/rsschool-cv/tree/rsschool-cv-html">cv</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer-container">
+        <a href="https://github.com/plumkek" class="github navigation-link"></a>
+        2022
+        <a href="https://rs.school/js/" class="rsschool"></a>
+        </div>
+    </footer>
 </body>
 </html>
