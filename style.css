@@ -1,158 +1,214 @@
 * {
     box-sizing: border-box;
 }
-@media (max-width: 768px) {
-    .section {
-      width: 100%;
-    }
+html {
+    scroll-behavior: smooth; 
 }
-@font-face {
-    font-family: Roboto;
-    src: url("assets/fonts/Roboto.ttf");
-}
-body{
+body {
+    font-family: 'Cormorant Garamond', serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(26, 24, 33);
 }
-html {
-    scroll-behavior: smooth; 
-    background-color: rgb(8, 2, 32);
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 50px;
+}
+.header {
+    background-color: rgb(196, 111, 87);
+}
+.navigation-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navigation-link {
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
 }
 .main-container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
-
-footer{
-    font-size: 16px;
+.section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid cadetblue;
+    background-color: rgb(255, 255, 255);
+}
+.section-education, .section-projects{
+    border-bottom: 0;
+}
+.section-title{
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgb(196, 87, 109)
+}
+.section-name {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 50px 30px 35px;
+    border-bottom: 15px solid rgb(232, 232, 230);
+}
+.section-name-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.section-name-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+.section-education, .section-projects {
+    border-bottom: 0;
+}
+.main {
+    margin-bottom: auto;
+}
+.main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    color: rgb(46, 61, 32);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    line-height: 50px;
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -70px;
+    background-color: rgb(196, 111, 87);
+}
+.section-subtitle {
+    color: rgb(104, 120, 89);
+}
+.section-list {
+    margin: 0;
+    padding: 10px;
+}
+.section-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.section-item a {
+    text-decoration: none;
+    color: rgb(104, 120, 89);
+    transition: color 0.5s;
+}
+a:hover {
+    color: rgb(234, 223, 15);
+    transition: color 0.5s;
+}
+.footer {
+    background-color: rgb(196, 111, 87);
+    padding: 20px;
+}
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    align-content: space-between;
-    background-color: rgb(87, 87, 196);
-    max-width: 100%;
     margin: 0 auto;
-    padding: 2%;
-    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
-.navigation-list{
-    background-color: rgb(87, 87, 196);
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 14x;
-    color: aliceblue;
-    align-items: center;
-    max-width: 100%;
-    height: 60px;
-    margin: 0 auto;
-    padding: 0 auto;
-    text-decoration: none;
+.github {
+    width: 50px;
+    height: 50px;
+    background-image: url("/assets/github_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.navigation-link{
-    padding: 0 20px;
-    line-height: 50px;
-    transition: .3s;
+.rsschool {
+    width: 100px;
+    height: 40px;
+    background-image: url("https://rs.school/images/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.name{
-    background-color: rgb(8, 2, 32);
-    color: aliceblue;
-    display: flex;
-    flex-direction: row;
+.pre {
+    padding: 0;
+    margin: 0;
+}
+.nav-menu {
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    font-size: 200%;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    user-select: none;
 }
-.round{
-    border-radius: 100%;
-    display: block;
-    flex-direction: row;
-    margin-left: 20px;
+.nav-menu div {
+    width: 70%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 3px 0;
 }
-section {
-    width: 100%;
-    background-color: #ffffff;
-    margin: 2% auto;
-    padding: 3%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    line-height: 200%;
-    font-size: 1.1em;
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 20px;
+    }
 }
-.code{
-    width: 520px;
-    height: 260px;
-    line-height: 20px;
-    float: left;
-    font-style: oblique;
-    margin-left: 30px;
-    margin-top: 0px;
-    font-size: 16px;
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+    .section-name {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation {
+        display: none;
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-education {
+        border-bottom: 1px solid cadetblue;
+    }
 }
-h2{
-    padding: 2%;
-    font-size: 1.8em;
-    font-style: normal;
-    text-align: center;
-}
-.contacts{
-    width: 300px;
-    height: 400px;
-    float: left;
-    line-height: 20px;
-    text-align: left;
-    margin-left: 30px;
-}
-.info{
-    float: left;
-    width: 850px;
-    height: 400px;
-    margin-left: 30px;
-    font-weight: bold;
-    
-}
-.skills, .skills2{
-    float: left;
-    width: 300px;
-    height: 260px;
-    margin-left: 30px;
-    line-height: 24px;
-    margin-top: 0px;
-}
-.code-text{
-    background-color: #ffffff;
-}
-.projects{
-    float: left;
-    width: 95%;
-    height: 100px;
-    margin-left: 30px;
-    line-height: 24px;
-    margin-top: 0px;
-    text-align: left;
-}
-.education{
-    float: left;
-    width: 450px;
-    height: 350px;
-    margin-left: 30px;
-    margin-top: 0px;
-}
-.language{
-    float: left;
-    width: 700px;
-    height: 350px;
-    margin-left: 30px;
-    margin-top: 0px;
-    margin-left: 30px;
+@media (max-width: 410px) {
+    .main-title {
+      font-size: 24px;
+      letter-spacing: 4px;
+    }  
 }
